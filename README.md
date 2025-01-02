@@ -4,22 +4,19 @@ This repository contains the solution for the **Insurance Premium Prediction Com
 
 ## Objective
 
-The competition's objective is to predict the **Premium Amount** for each row in the test dataset. Submissions are evaluated using the **Root Mean Squared Logarithmic Error (RMSLE)**.
+Predict the **Premium Amount** for each row in the test dataset. Submissions are evaluated using the **Root Mean Squared Logarithmic Error (RMSLE)**.
+
+---
 
 ## Dataset Overview
 
-The dataset for this competition was generated using a deep learning model trained on the **Insurance Premium Prediction dataset**. The feature distributions are similar but not identical to the original dataset. Participants were encouraged to explore the differences and leverage the original dataset for potential performance improvements.
+The dataset was generated using a deep learning model trained on the **Insurance Premium Prediction dataset**. Feature distributions are similar but not identical to the original dataset.
 
 ### Files
 
-1. **train.csv**
-   - Contains the training data with the target variable: `Premium Amount`.
-
-2. **test.csv**
-   - Contains the test data without the target variable.
-
-3. **sample_submission.csv**
-   - Provides the submission format. Participants are required to predict the `Premium Amount` for each row in the test set.
+- **train.csv**: Training data with the target variable `Premium Amount`.  
+- **test.csv**: Test data without the target variable.  
+- **sample_submission.csv**: Submission format file.  
 
 ---
 
@@ -27,45 +24,31 @@ The dataset for this competition was generated using a deep learning model train
 
 Submissions are evaluated using the **Root Mean Squared Logarithmic Error (RMSLE)**:
 
+---
+
 ## Best Score
 
 **Achieved RMSLE:** **1.06643**
 
 ---
 
-## Solution Approach
+## Solution Summary
 
-### 1. Data Exploration & Preprocessing
-- Performed EDA to identify trends, outliers, and missing values.
-- Handled missing data and scaled features appropriately.
-
-### 2. Feature Engineering
-- Created new features and transformed existing ones to enhance predictive power.
-- Explored the use of original Insurance Premium Prediction dataset for additional insights.
-
-### 3. Model Selection & Training
-- Experimented with various machine learning models, including:
-  - Gradient Boosting (XGBoost, LightGBM)
-  - Ensemble models
-- Tuned hyperparameters using techniques like grid search and Bayesian optimization.
-
-### 4. Evaluation
-- Used cross-validation to assess model performance and prevent overfitting.
-- Selected the best-performing model based on RMSLE on the validation set.
+- **EDA & Preprocessing**: Identified trends, handled missing data, and scaled features.  
+- **Feature Engineering**: Created new features to enhance predictions.  
+- **Model**: Used **LightGBM** for training, with hyperparameter tuning for optimal performance.  
+- **Evaluation**: Applied cross-validation to ensure robustness.
 
 ---
 
 ## Submission
 
-To make a submission:
-1. Generate predictions on the test set using the trained model.
-2. Format the predictions according to `sample_submission.csv`.
+1. Generate predictions on `test.csv` using the trained LightGBM model.  
+2. Format predictions as per `sample_submission.csv`.  
 3. Submit the file.
 
 ---
 
 ## Acknowledgments
 
-Special thanks to the organizers for providing a challenging dataset and an opportunity to improve skills in predictive modeling.
-
----
+Thanks to the organizers for providing this dataset and the opportunity to refine predictive modeling skills.
